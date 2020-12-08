@@ -1,0 +1,11 @@
+<button mat-button [matMenuTriggerFor]="menuCliente">Cliente</button>
+<mat-menu #menuCliente="matMenu">
+  <button mat-menu-item (click)="CadastroCliente()">Cadastrar</button>
+  <button mat-menu-item (click)="ListaCliente()">Listar</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="menuFornecedor">Fornecedor</button>
+<mat-menu #menuFornecedor="matMenu">
+  <button mat-menu-item>Cadastrar</button>
+  <button mat-menu-item>Listar</button>
+</mat-menu>
