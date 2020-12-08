@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -91,6 +92,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -124,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "CRUD-BASICO-CAMADAS"
+  "defaultProject": "CRUD-BASICO-CAMADAS",
+  "cli": {
+    "analytics": "14000a00-4016-49d9-bfea-c97aee46aa6d"
+  }
 }
