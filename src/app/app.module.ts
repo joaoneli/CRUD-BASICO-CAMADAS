@@ -10,6 +10,7 @@ import { MenuComponent } from './toolbar/menu/menu.component';
 import { ComponentsModule } from './components/components.module';
 import { YesNoDialogComponent } from './components/shared/yes-no-dialog/yes-no-dialog.component';
 import { ClienteEditarDialogComponent } from './components/cliente/cliente-lista/cliente-editar-dialog/cliente-editar-dialog.component';
+import { FornecedorEditarDialogComponent } from './components/fornecedor/fornecedor-lista/fornecedor-editar-dialog/fornecedor-editar-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ClienteEditarDialogComponent } from './components/cliente/cliente-lista
   providers: [],
   entryComponents: [
     YesNoDialogComponent,
-    ClienteEditarDialogComponent
+    ClienteEditarDialogComponent,
+    FornecedorEditarDialogComponent
   ],
   bootstrap: [AppComponent]
 })

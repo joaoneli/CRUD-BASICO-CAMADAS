@@ -6,6 +6,6 @@
 
 <button mat-button [matMenuTriggerFor]="menuFornecedor">Fornecedor</button>
 <mat-menu #menuFornecedor="matMenu">
-  <button mat-menu-item>Cadastrar</button>
-  <button mat-menu-item>Listar</button>
+  <button mat-menu-item (click)="CadastroFornecedor()">Cadastrar</button>
+  <button mat-menu-item (click)="ListaFornecedor()">Listar</button>
 </mat-menu>

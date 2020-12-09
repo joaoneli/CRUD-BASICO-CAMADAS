@@ -18,5 +18,11 @@ export class MenuComponent implements OnInit {
   ListaCliente(){
     window.location.assign('lista/cliente');
   }
+  CadastroFornecedor(){
+    window.location.assign('cadastro/fornecedor');
+  }
+  ListaFornecedor(){
+    window.location.assign('lista/fornecedor');
+  }
 
 }

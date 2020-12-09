@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from 'src/app/models/cliente';
 import { ClienteService } from 'src/app/services/cliente.service';
+import { ClienteValidantion } from '../../shared/validations/model/cliente-validantion';
+import { Validations } from '../../shared/validations/validations';
 
 @Component({
   selector: 'app-cliente-cadastro',
@@ -10,33 +12,22 @@ import { ClienteService } from 'src/app/services/cliente.service';
 export class ClienteCadastroComponent implements OnInit {
 
   cliente: Cliente = new Cliente();
-  
+  validation: ClienteValidantion = new ClienteValidantion();
+
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void {
   }
 
   Salvar(){
-       let erro = 0;
-       if (this.cliente.nome == null){
-         erro ++;
-       }
-       if (this.cliente.cpf == null){
-        erro ++;
-      }
-       if (this.cliente.endereco == null){
-        erro ++;
-      }
-       if (this.cliente.telefone == null){
-        erro ++;
-      }
+    this.validation = Validations.ClienteValidation(this.cliente);
 
-       if (!erro){
-        this.clienteService.insert(this.cliente).subscribe(success=>{
-          this.cliente = new Cliente();
-        }, error => {
-            console.log(error.message);
-        });
-      }
+    if(!this.validation){
+      this.clienteService.insert(this.cliente).subscribe(success => {
+        this.cliente = new Cliente();
+      }, error => {
+          console.log(error.message);
+      });
+    }
   }
 }

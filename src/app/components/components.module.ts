@@ -9,6 +9,10 @@ import { ClienteEditarDialogComponent } from './cliente/cliente-lista/cliente-ed
 import { ClienteListaComponent } from './cliente/cliente-lista/cliente-lista.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { YesNoDialogComponent } from './shared/yes-no-dialog/yes-no-dialog.component';
+import { FornecedorComponent } from './fornecedor/fornecedor.component';
+import { FornecedorCadastroComponent } from './fornecedor/fornecedor-cadastro/fornecedor-cadastro.component';
+import { FornecedorListaComponent } from './fornecedor/fornecedor-lista/fornecedor-lista.component';
+import { FornecedorEditarDialogComponent } from './fornecedor/fornecedor-lista/fornecedor-editar-dialog/fornecedor-editar-dialog.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { YesNoDialogComponent } from './shared/yes-no-dialog/yes-no-dialog.compo
     ClienteListaComponent,
     YesNoDialogComponent,
     YesNoDialogComponent,
-    ClienteEditarDialogComponent
+    ClienteEditarDialogComponent,
+    FornecedorComponent,
+    FornecedorCadastroComponent,
+    FornecedorListaComponent,
+    FornecedorEditarDialogComponent
   ],
   imports: [
     CommonModule,

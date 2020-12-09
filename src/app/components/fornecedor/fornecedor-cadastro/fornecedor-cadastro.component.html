@@ -7,7 +7,7 @@
           <mat-form-field class="example-full-width">
             <mat-label>Nome</mat-label>
             <input matInput 
-              [(ngModel)]="cliente.nome"
+              [(ngModel)]="fornecedor.nome"
               type="text"
               [ngModelOptions]="{standalone: true}"
               required="true"
@@ -15,18 +15,19 @@
             <mat-error *ngIf="validation">{{validation.nome}}</mat-error>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-              <mat-label>Cpf</mat-label>
+              <mat-label>Cnpj</mat-label>
               <input matInput
-              [(ngModel)]="cliente.cpf"
+              [(ngModel)]="fornecedor.cnpj"
               type="text"
               [ngModelOptions]="{standalone: true}"
-              required="true">
-              <mat-error *ngIf="validation">{{validation.cpf}}</mat-error>
+              required="true"
+              >
+              <mat-error *ngIf="validation">{{validation.cnpj}}</mat-error>
           </mat-form-field>
           <mat-form-field class="example-full-width">
               <mat-label>Endereço</mat-label>
               <input matInput
-              [(ngModel)]="cliente.endereco"
+              [(ngModel)]="fornecedor.endereco"
               type="text"
               [ngModelOptions]="{standalone: true}"
               required="true"
@@ -36,7 +37,7 @@
           <mat-form-field class="example-full-width">
               <mat-label>Telefone</mat-label>
               <input matInput
-              [(ngModel)]="cliente.telefone"
+              [(ngModel)]="fornecedor.telefone"
               type="text"
               [ngModelOptions]="{standalone: true}"
               required="true"

@@ -1,0 +1,37 @@
+<h1 mat-dialog-title>{{data.id}} - {{data.nome}}</h1>
+<div mat-dialog-content>
+    <mat-form-field class="example-full-width">
+    <mat-label>Nome</mat-label>
+    <input matInput 
+        [(ngModel)]="data.nome"
+        type="text"
+        [ngModelOptions]="{standalone: true}"
+    >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Cnpj</mat-label>
+        <input matInput
+        [(ngModel)]="data.cnpj"
+        type="text"
+        [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Endereço</mat-label>
+        <input matInput
+        [(ngModel)]="data.endereco"
+        type="text"
+        [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Telefone</mat-label>
+        <input matInput
+        [(ngModel)]="data.telefone"
+        type="text"
+        [ngModelOptions]="{standalone: true}"
+        >
+    </mat-form-field>  
+</div>
+<div mat-dialog-actions align="end">
+    <button mat-raised-button (click)="onNoClick()">Cancelar</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="data" cdkFocusInitial>Atualizar</button>
+</div>
