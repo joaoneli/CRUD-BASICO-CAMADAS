@@ -21,8 +21,7 @@ export class ClienteCadastroComponent implements OnInit {
 
   Salvar(){
     this.validation = Validations.ClienteValidation(this.cliente);
-
-    if(!this.validation){
+    if (!this.validation){
       this.clienteService.insert(this.cliente).subscribe(success => {
         this.cliente = new Cliente();
       }, error => {
