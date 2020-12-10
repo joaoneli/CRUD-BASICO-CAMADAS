@@ -7,28 +7,40 @@ export class Validations {
     static ClienteValidation(cliente: Cliente): ClienteValidantion {
         const clienteValidantion = new ClienteValidantion();
 
-        clienteValidantion.nome = getNameClienteErrorMessage(cliente);
+        clienteValidantion.cliente.nome = getNameClienteErrorMessage(cliente);
 
-        clienteValidantion.cpf = getCpfClienteErrorMessage(cliente);
+        clienteValidantion.cliente.cpf = getCpfClienteErrorMessage(cliente);
 
-        clienteValidantion.endereco = getEnderecoClienteErrorMessage(cliente);
+        clienteValidantion.cliente.endereco = getEnderecoClienteErrorMessage(cliente);
 
-        clienteValidantion.telefone = getTelefoneClienteErrorMessage(cliente);
+        clienteValidantion.cliente.telefone = getTelefoneClienteErrorMessage(cliente);
 
+        if(clienteValidantion.cliente.nome || clienteValidantion.cliente.cpf || 
+            clienteValidantion.cliente.endereco || clienteValidantion.cliente.telefone){
+
+            clienteValidantion.isError = true
+
+        }
         return clienteValidantion;
     }
 
     static FornecedorValidation(fornecedor: Fornecedor): FornecedorValidantion {
         const fornecedorValidantion = new FornecedorValidantion();
 
-        fornecedorValidantion.nome = getNameFornecedorErrorMessage(fornecedor);
+        fornecedorValidantion.fornecedor.nome = getNameFornecedorErrorMessage(fornecedor);
 
-        fornecedorValidantion.cnpj = getCnpjFornecedorErrorMessage(fornecedor);
+        fornecedorValidantion.fornecedor.cnpj = getCnpjFornecedorErrorMessage(fornecedor);
 
-        fornecedorValidantion.endereco = getEnderecoFornecedorErrorMessage(fornecedor);
+        fornecedorValidantion.fornecedor.endereco = getEnderecoFornecedorErrorMessage(fornecedor);
 
-        fornecedorValidantion.telefone = getTelefoneFornecedorErrorMessage(fornecedor);
+        fornecedorValidantion.fornecedor.telefone = getTelefoneFornecedorErrorMessage(fornecedor);
 
+        if(fornecedorValidantion.fornecedor.nome || fornecedorValidantion.fornecedor.cnpj || 
+            fornecedorValidantion.fornecedor.endereco || fornecedorValidantion.fornecedor.telefone){
+
+                fornecedorValidantion.isError = true
+
+        }
         return fornecedorValidantion;
     }
 }

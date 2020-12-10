@@ -1,7 +1,6 @@
+import { Cliente } from 'src/app/models/cliente';
+
 export class ClienteValidantion {
-    id: number;
-    nome: string;
-    cpf: string;
-    endereco: string;
-    telefone: string;
+    cliente: Cliente = new Cliente();
+    isError: boolean;
 }

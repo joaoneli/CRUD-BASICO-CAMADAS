@@ -1,0 +1,4 @@
+01 - Curso AspNet Core com Angular - https://www.udemy.com/course/angular-dotnetcore-efcore/
+02 - Stack Overflow - https://pt.stackoverflow.com/
+03 - Angular - https://angular.io/
+04 - Angular Material - https://material.angular.io/

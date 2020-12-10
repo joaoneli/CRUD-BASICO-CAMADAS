@@ -12,7 +12,7 @@
               [ngModelOptions]="{standalone: true}"
               required="true"
             >
-            <mat-error *ngIf="validation">{{validation.nome}}</mat-error>
+            <mat-error *ngIf="validation">{{validation.fornecedor.nome}}</mat-error>
           </mat-form-field>
           <mat-form-field class="example-full-width">
               <mat-label>Cnpj</mat-label>
@@ -22,7 +22,7 @@
               [ngModelOptions]="{standalone: true}"
               required="true"
               >
-              <mat-error *ngIf="validation">{{validation.cnpj}}</mat-error>
+              <mat-error *ngIf="validation">{{validation.fornecedor.cnpj}}</mat-error>
           </mat-form-field>
           <mat-form-field class="example-full-width">
               <mat-label>Endereço</mat-label>
@@ -32,7 +32,7 @@
               [ngModelOptions]="{standalone: true}"
               required="true"
               >
-              <mat-error *ngIf="validation">{{validation.endereco}}</mat-error>
+              <mat-error *ngIf="validation">{{validation.fornecedor.endereco}}</mat-error>
           </mat-form-field>
           <mat-form-field class="example-full-width">
               <mat-label>Telefone</mat-label>
@@ -42,7 +42,7 @@
               [ngModelOptions]="{standalone: true}"
               required="true"
               >
-              <mat-error *ngIf="validation">{{validation.telefone}}</mat-error>
+              <mat-error *ngIf="validation">{{validation.fornecedor.telefone}}</mat-error>
           </mat-form-field>  
           <button mat-raised-button color="primary" [type]="'submit'" >Cadastrar</button>
       </form>

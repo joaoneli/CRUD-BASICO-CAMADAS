@@ -21,7 +21,7 @@ export class FornecedorCadastroComponent implements OnInit {
 
   Salvar(){
     this.validation = Validations.FornecedorValidation(this.fornecedor);
-    if (!this.validation){
+    if (!this.validation.isError){
       this.fornecedorService.insert(this.fornecedor).subscribe(success => {
         this.fornecedor = new Fornecedor();
         }, error => {

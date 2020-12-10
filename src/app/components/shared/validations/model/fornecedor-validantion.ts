@@ -1,8 +1,7 @@
+import { Fornecedor } from 'src/app/models/fornecedor';
+
 export class FornecedorValidantion {
-    id: number;
-    nome: string;
-    cnpj: string;
-    endereco: string;
-    telefone: string;
+    fornecedor: Fornecedor = new Fornecedor();
+    isError: boolean;
 }
 
